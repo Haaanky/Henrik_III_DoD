@@ -56,5 +56,8 @@ namespace DungeonsOfDoom
         {
             ActiveArchetype = archetype;
         }
+        
+        override wäääääh strings magic etc
+    
     }
 }
