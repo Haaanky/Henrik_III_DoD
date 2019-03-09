@@ -16,7 +16,7 @@ namespace DungeonsOfDoom
             return $"Name: {Name} | Value: {Price} | Weight: {Weight}kg | Damage: {Damage}";
         }
 
-        public int Damage { get; set; }
+        public int Damage { get; set; } // VERY IMPORTANT STUFF DO NOT REMOVE
         public int Durability { get; set; }
     }
 }
