@@ -62,5 +62,8 @@ namespace DungeonsOfDoom
         {
             return $"Name: {Name}, Health: {Health}, Class: {ActiveArchetype}";
         }
+        
+        override wäääääh strings magic etc
+    
     }
 }
