@@ -56,8 +56,10 @@ namespace DungeonsOfDoom
         {
             ActiveArchetype = archetype;
         }
-        
-        override wäääääh strings magic etc
-    
+
+        public override string ToString()
+        {
+            return $"Name: {Name}, Health: {Health}, Class: {ActiveArchetype}";
+        }
     }
 }
