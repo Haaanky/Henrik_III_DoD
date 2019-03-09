@@ -55,6 +55,7 @@ namespace DungeonsOfDoom
             ChoosePlayerName();
             DisplayArchetypes();
             ChooseArchetype();
+            player.Money = 100;
         }
 
         private void ChoosePlayerName()
@@ -127,7 +128,6 @@ namespace DungeonsOfDoom
                             world.Map[x, y].Item = new Chest("Mimic", 200, 5);
                 }
             }
-            //player.Money = 6789;
         }
 
         private void DisplayWorld()
