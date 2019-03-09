@@ -245,7 +245,8 @@ namespace DungeonsOfDoom
             if (encounterResult) //tmp for now, needs to be updated later
             {
                 Monster.NumberOfMonsters--;
-                player.CharacterInventory.ListOfItems.Add(tmpMap.Monster);
+                if (tmpMap.Monster is Monster)
+                    player.CharacterInventory.ListOfItems.Add(tmpMap.Monster);
                 tmpMap.Monster = null;
             }
 
