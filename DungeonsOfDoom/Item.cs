@@ -14,7 +14,6 @@ namespace DungeonsOfDoom
             Price = price;
             Weight = weight;
             Damage = 0;
-            Monster.NumberOfMonsters++;
         }
 
         public int Damage { get; set; }
