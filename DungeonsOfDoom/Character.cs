@@ -14,7 +14,7 @@ namespace DungeonsOfDoom
         {
             Health = health;
             Name = name;
-            ActiveArchetype = new MonsterArchetype();
+            //ActiveArchetype = new MonsterArchetype();
             SetArchetype(new MonsterArchetype());
         }
 
@@ -62,8 +62,5 @@ namespace DungeonsOfDoom
         {
             return $"Name: {Name}, Health: {Health}, Class: {ActiveArchetype}";
         }
-        
-        override wäääääh strings magic etc
-    
     }
 }
