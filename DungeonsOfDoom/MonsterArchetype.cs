@@ -8,6 +8,7 @@ namespace DungeonsOfDoom
     {
         public MonsterArchetype() : base(30, "Monster")
         {
+            Monster.NumberOfMonsters++;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace DungeonsOfDoom
             Health = health;
             Name = name;
             //ActiveArchetype = new MonsterArchetype();
-            SetArchetype(new MonsterArchetype());
+            //SetArchetype(new MonsterArchetype());
         }
 
         public string Name

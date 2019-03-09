@@ -11,7 +11,6 @@ namespace DungeonsOfDoom
         public Monster(int health, string name) : base(health, name)
         {
             ActiveArchetype = new MonsterArchetype();
-            NumberOfMonsters++;
         }
 
         public static int NumberOfMonsters { get; set; }
