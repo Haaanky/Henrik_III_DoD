@@ -16,7 +16,11 @@ namespace DungeonsOfDoom
             return $"Name: {Name} | Value: {Price} | Weight: {Weight}kg | Damage: {Damage}";
         }
 
+<<<<<<< HEAD
         //public int Damage { get; set; }
+=======
+        public int Damage { get; set; } // VERY IMPORTANT STUFF DO NOT REMOVE
+>>>>>>> 17bf09e... Update Weapon.cs
         public int Durability { get; set; }
     }
 }
