@@ -8,6 +8,7 @@ namespace DungeonsOfDoom
     {
         public Chest(string name, int price, int weight) : base(name, price, weight)
         {
+            ActiveArchetype = new MonsterArchetype();
         }
 
         public int Health { get; set; }

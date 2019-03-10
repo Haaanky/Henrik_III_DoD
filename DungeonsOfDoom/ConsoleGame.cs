@@ -55,6 +55,7 @@ namespace DungeonsOfDoom
             ChoosePlayerName();
             DisplayArchetypes();
             ChooseArchetype();
+            player.Money = 100;
         }
 
         private void ChoosePlayerName()
@@ -127,7 +128,6 @@ namespace DungeonsOfDoom
                             world.Map[x, y].Item = new Chest("Mimic", 200, 5);
                 }
             }
-            //player.Money = 6789;
         }
 
         private void DisplayWorld()
@@ -245,7 +245,8 @@ namespace DungeonsOfDoom
             if (encounterResult) //tmp for now, needs to be updated later
             {
                 Monster.NumberOfMonsters--;
-                player.CharacterInventory.ListOfItems.Add(tmpMap.Monster);
+                if (tmpMap.Monster is Monster)
+                    player.CharacterInventory.ListOfItems.Add(tmpMap.Monster);
                 tmpMap.Monster = null;
             }
 
