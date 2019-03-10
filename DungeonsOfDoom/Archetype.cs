@@ -2,17 +2,40 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using FirstClassLib;
 
 namespace DungeonsOfDoom
 {
     abstract class Archetype
     {
-        public Archetype(int baseHealth, string aName)
+        public enum ArchetypeColors
+        {
+            Green,
+            Blue,
+            Red,
+            Purple,
+            Yellow,
+            Orange,
+            Pink,
+            DarkBlue,
+            DarkGreen,
+            DarkRed,
+            Gray,
+            Cyan,
+            DarkCyan,
+        }
+
+        public Archetype(int baseHealth, string aName, ArchetypeColors color)
         {
             BaseHealth = baseHealth;
             ArchtypeName = aName;
             RandomizeStartingStats();
+            Damage = Strength;
+            ArchetypeColor = color;
+            ColorToConsole = LocalConsoleUtils.ConvertArchetypeColorToConsoleColor(color);
         }
+
+        public ConsoleColor ColorToConsole { get; set; }
 
         private void RandomizeStartingStats()
         {
@@ -33,13 +56,14 @@ namespace DungeonsOfDoom
                         default:
                             break;
                     }
-                    Damage = Strength;
                 }
             }
         }
 
         public int BaseHealth { get; set; }
         public string ArchtypeName { get; set; }
+        private ArchetypeColors ArchetypeColor { get; set; }
+
 
         public int Damage { get; set; }
 

@@ -6,7 +6,7 @@ namespace DungeonsOfDoom
 {
     class MagicUser : Archetype
     {
-        public MagicUser() : base(20, "Magic User")
+        public MagicUser() : base(20, "Magic User", ArchetypeColors.Yellow)
         {
         }
     }

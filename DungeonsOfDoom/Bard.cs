@@ -6,13 +6,13 @@ namespace DungeonsOfDoom
 {
     class Bard : Archetype
     {
-        public Bard() : base(30, "Bard")
+        public Bard() : base(30, "Bard", ArchetypeColors.Purple)
         {
         }
 
-        public static implicit operator Bard(List<Archetype> v)
-        {
-            return v;
-        }
+        //public static implicit operator Bard(List<Archetype> v)
+        //{
+        //    return v;
+        //}
     }
 }

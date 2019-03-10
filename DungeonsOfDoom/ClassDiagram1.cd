@@ -3,15 +3,15 @@
   <Class Name="DungeonsOfDoom.Archetype" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAABAAAEAAAAAAABBAAAAAAAAACAAIACg=</HashCode>
+      <HashCode>AAAAAACAEAAAABAAAEAAAAAAABBAAAAAAAAACAAIACg=</HashCode>
       <FileName>Archetype.cs</FileName>
-      <NewMemberFileName>Apple.cs</NewMemberFileName>
+      <NewMemberFileName>Archetype.ArchetypeColors.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DungeonsOfDoom.Bard" Collapsed="true">
     <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Bard.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -39,7 +39,7 @@
   <Class Name="DungeonsOfDoom.Character" Collapsed="true">
     <Position X="3.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQCAGAAAAAAAAAAAABAAQAAKAEAkAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAQCACAAAAAAAAEAAABAAQAAKAEAkAAAAAAAAAAAAA=</HashCode>
       <FileName>Character.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -54,7 +54,7 @@
   <Class Name="DungeonsOfDoom.Weapon" Collapsed="true">
     <Position X="12.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAAAAEAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
       <FileName>Weapon.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

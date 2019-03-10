@@ -6,7 +6,7 @@ namespace DungeonsOfDoom
 {
     class MonsterArchetype : Archetype
     {
-        public MonsterArchetype() : base(30, "Monster")
+        public MonsterArchetype() : base(30, "Monster", ArchetypeColors.Red)
         {
             Monster.NumberOfMonsters++;
         }

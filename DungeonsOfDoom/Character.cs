@@ -6,8 +6,6 @@ namespace DungeonsOfDoom
 {
     abstract class Character : IPackable
     {
-        protected Random numberGenerator = new Random();
-
         private string name;
 
         public Character(int health, string name)

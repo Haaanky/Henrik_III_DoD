@@ -6,7 +6,7 @@ namespace DungeonsOfDoom
 {
     class FightingMan : Archetype
     {
-        public FightingMan() : base(50, "Fighting Man")
+        public FightingMan() : base(50, "Fighting Man", ArchetypeColors.Yellow)
         {
         }
     }

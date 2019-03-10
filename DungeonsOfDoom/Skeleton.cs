@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirstClassLib;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,7 +9,8 @@ namespace DungeonsOfDoom
     {
         public Skeleton(int health, string name) : base (health, name)
         {
-            ActiveArchetype.Strength = numberGenerator.Next(5, 7);
+            //ActiveArchetype.Strength = numberGenerator.Next(5, 7);
+            ActiveArchetype.Strength = RandomUtils.RandomGenerator(5, 7);
         }
 
         public override void Attack(IAttackable target)
