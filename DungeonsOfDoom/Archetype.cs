@@ -23,6 +23,8 @@ namespace DungeonsOfDoom
             Gray,
             Cyan,
             DarkCyan,
+            Indigo,
+            MediumSlateBlue,
         }
 
         public Archetype(int baseHealth, string aName, ArchetypeColors color)
@@ -33,9 +35,11 @@ namespace DungeonsOfDoom
             Damage = Strength;
             ArchetypeColor = color;
             ColorToConsole = LocalConsoleUtils.ConvertArchetypeColorToConsoleColor(color);
+            Console.ResetColor();
         }
 
-        public ConsoleColor ColorToConsole { get; set; }
+        //public ConsoleColor ColorToConsole { get; set; } // Regular console color
+        public System.Drawing.Color ColorToConsole { get; set; } 
 
         private void RandomizeStartingStats()
         {

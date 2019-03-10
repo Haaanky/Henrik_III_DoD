@@ -6,7 +6,7 @@ namespace DungeonsOfDoom
 {
     class Theif : Archetype
     {
-        public Theif() : base(20, "Theif", ArchetypeColors.DarkBlue)
+        public Theif() : base(20, "Theif", ArchetypeColors.MediumSlateBlue)
         {
         }
     }

@@ -1,9 +1,12 @@
 ﻿using FirstClassLib;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using Console = Colorful.Console;
 
 namespace DungeonsOfDoom
 {
@@ -14,12 +17,12 @@ namespace DungeonsOfDoom
 
         Player player;
         World world; //gjorde om world till en klass med prop room[,] istället, för att lättare kunna återanvända world etc som instans
-        //Random random = new Random();
         List<Archetype> archetypes = new List<Archetype>() { new Bard(), new FightingMan(), new MagicUser(), new Theif() }; //en lista med alla archetypes, kan nog göras lättare/mer DRY
 
         public void Play()
         {
             InitGame();
+            FunIntro();
             CreatePlayer();
             CreateInventory();
             CreateWorld();
@@ -28,8 +31,6 @@ namespace DungeonsOfDoom
             {
                 Console.Clear();
                 DisplayWorld();
-                //DisplayStats();
-                //DisplayInventory(); //skriver ut inventoryn
                 AskForMovement();
                 PlayerEnteredRoom(); //Kollar om det finns något i rummet och isf vad som ska hända
             } while (player.Health > 0 && Monster.NumberOfMonsters > 0);
@@ -42,20 +43,42 @@ namespace DungeonsOfDoom
             GameOver();
         }
 
+        private void FunIntro()
+        {
+            int DA = 255;
+            int V = 122;
+            int ID = 155;
+
+            Console.WriteAscii("Dungeons", Color.DarkRed);
+            Thread.Sleep(500);
+            Console.WriteAscii("of", Color.SaddleBrown);
+
+            for (int i = 0; i < 3; i++)
+            {
+                Thread.Sleep(1000);
+                Console.WriteAscii("DooM", Color.FromArgb(DA, V, ID));
+
+                DA -= 8;
+                V -= 36;
+                ID -= 10;
+            }
+        }
+
         private void InitGame()
         {
             Console.Clear();
             Console.WindowHeight = 45;
             Console.WindowWidth = 180;
+            Console.CursorVisible = false;
         }
 
         private void GameWin()
         {
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = Color.LimeGreen;
             TextUtils.AnimateText($"You are the chosen defender of the realm great champion..!\nThe kingdom is finally at peace from the scary monsters. \nLong live {player.Name} the queen!", 100);
             Console.ReadKey(true);
-            Console.ResetColor();
+            //Console.ResetColor();
         }
 
         private void CreatePlayer()
@@ -70,7 +93,7 @@ namespace DungeonsOfDoom
         {
             Console.Write("Choose your name: ");
             player = new Player(Console.ReadLine());
-        } // för att välja sitt namn
+        }
 
         private void CreateInventory()
         {
@@ -78,11 +101,10 @@ namespace DungeonsOfDoom
             {
                 ListOfItems = new List<IPackable>() { new Stick(1, 1, 2) }
             };
-        } //Skapar en ny instans av inventory klassen som är en prop i alla character
+        }
 
         private void DisplayArchetypes()
         {
-            Console.Clear();
             Console.WriteLine("Choose your class: \n");
             for (int i = 0; i < archetypes.Count; i++)
             {
@@ -140,6 +162,8 @@ namespace DungeonsOfDoom
 
         private void DisplayWorld()
         {
+            Console.WriteAscii("Dungeon 1", Color.DarkRed);
+            Console.ForegroundColor = Color.AntiqueWhite;
             for (int y = 0; y < world.Map.GetLength(1); y++)
             {
                 if (y == 0)
@@ -159,14 +183,17 @@ namespace DungeonsOfDoom
                     Room room = world.Map[x, y];
                     if (player.X == x && player.Y == y)
                     {
-                        //Console.BackgroundColor = ConsoleColor.Gray;
-                        Console.ForegroundColor = player.ActiveArchetype.ColorToConsole;
-                        Console.Write("P");
-                        Console.ResetColor();
+                        //Console.ForegroundColor = player.ActiveArchetype.ColorToConsole;
+                        Console.Write("P", player.ActiveArchetype.ColorToConsole);
+                        //Console.ResetColor();
                     }
-                    else if (room.Monster != null)
-                        Console.Write("M");
-                    else if (room.Item != null)
+                    else if (room.Monster is Monster)
+                    {
+                        //Console.ForegroundColor = room.Monster.ActiveArchetype.ColorToConsole;
+                        Console.Write("M", room.Monster.ActiveArchetype.ColorToConsole);
+                        //Console.ResetColor();
+                    }
+                    else if (room.Item is Item)
                         Console.Write("I");
                     else
                         Console.Write(".");
@@ -183,12 +210,12 @@ namespace DungeonsOfDoom
                     {
                         Console.Write("\u203E");
                     }
-                    Console.Write($"\u203E\u203E Number of monsters left: {Monster.NumberOfMonsters}");
+                    Console.Write($"\u203E\u203E Placeholder Text Lorem ipsum lalalala");
                     Console.OutputEncoding = Encoding.Default;
                     Console.WriteLine();
                 }
-
             }
+            Console.WriteLine($"{Environment.NewLine}Number of monsters left: {Monster.NumberOfMonsters}");
         }
 
         private void DisplayStats(int y)
@@ -198,8 +225,7 @@ namespace DungeonsOfDoom
                 case 0: Console.Write($" | Class: {player.ActiveArchetype.ArchtypeName}"); break;
                 case 1: Console.Write($" | Health: {player.Health}"); break;
                 case 2:
-                    Console.Write($" | Carrying Capacity Max: {player.MaxCarryingCapacity}kg | Current Inventory Weight: {player.CharacterInventory.Weight}kg | " +
-                $"Remaining Carrying Capacity: {player.MaxCarryingCapacity - player.CharacterInventory.Weight}kg"); break;
+                    Console.Write($" | Remaining Carrying Capacity: {player.MaxCarryingCapacity - player.CharacterInventory.Weight}kg"); break;
                 case 3: Console.Write($" | 1. Display Character Stats"); break;
                 case 4: Console.Write($" | 2. Display Inventory"); break;
                 default:
@@ -210,13 +236,14 @@ namespace DungeonsOfDoom
 
         private void DisplayInventory()  // skriver ut inventory
         {
-            Console.WriteLine($"Inventory:{Environment.NewLine}");
+            Console.WriteLine($"{Environment.NewLine}{Environment.NewLine}Inventory:{Environment.NewLine}");
             foreach (var item in player.CharacterInventory.ListOfItems)
             {
                 Console.WriteLine(item);
             }
 
-            TextUtils.PressAnyKey();
+            Console.WriteLine($"{Environment.NewLine}Current Inventory Weight: {player.CharacterInventory.Weight}kg");
+            Console.ReadKey(true);
         }
 
         private void AskForMovement()
@@ -251,10 +278,12 @@ namespace DungeonsOfDoom
 
         private void DisplayCharacterStats()
         {
-            Console.WriteLine($"Class: {player.ActiveArchetype.ArchtypeName}{Environment.NewLine}" +
+            Console.WriteLine($"{Environment.NewLine}{Environment.NewLine}Carrying Capacity Max: {player.MaxCarryingCapacity}kg{Environment.NewLine}" +
+                $"{Environment.NewLine}Physical stats:{Environment.NewLine}" +
                 $"Strenght: {player.ActiveArchetype.Strength}{Environment.NewLine}" +
                 $"Dexterity: {player.ActiveArchetype.Dexterity}{Environment.NewLine}" +
                 $"Constitution: {player.ActiveArchetype.Constitution}{Environment.NewLine}" +
+                $"{Environment.NewLine}Mental stats:{Environment.NewLine}" +
                 $"Intelligence: {player.ActiveArchetype.Intelligence}{Environment.NewLine}" +
                 $"Wisdom: {player.ActiveArchetype.Wisdom}{Environment.NewLine}" +
                 $"Charisma: {player.ActiveArchetype.Charisma}{Environment.NewLine}");
@@ -335,7 +364,7 @@ namespace DungeonsOfDoom
 
             Console.WriteLine("\n\n\nIt's just a chest . . .");
             TextUtils.AnimateText($". . . . . . . . . .{Environment.NewLine}", 300);
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = System.Drawing.Color.Red;
             TextUtils.AnimateText($"or is it a Mimic?!", 200);
             player.Attack(monster);
             monster.Attack(player);

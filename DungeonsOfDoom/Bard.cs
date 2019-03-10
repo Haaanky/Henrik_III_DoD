@@ -9,10 +9,5 @@ namespace DungeonsOfDoom
         public Bard() : base(30, "Bard", ArchetypeColors.Purple)
         {
         }
-
-        //public static implicit operator Bard(List<Archetype> v)
-        //{
-        //    return v;
-        //}
     }
 }
