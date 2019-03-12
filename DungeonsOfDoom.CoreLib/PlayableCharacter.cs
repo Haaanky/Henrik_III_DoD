@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DungeonsOfDoom.CoreLib
 {
-    abstract class PlayableCharacter : Character
+    public abstract class PlayableCharacter : Character
     {
         public PlayableCharacter(int health, int x, int y, string name) : base(health, name)
         {

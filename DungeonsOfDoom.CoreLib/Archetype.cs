@@ -6,7 +6,7 @@ using FirstClassLib;
 
 namespace DungeonsOfDoom.CoreLib
 {
-    abstract class Archetype
+    public abstract class Archetype
     {
         public enum ArchetypeColors
         {

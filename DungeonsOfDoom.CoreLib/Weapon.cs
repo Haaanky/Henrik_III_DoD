@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DungeonsOfDoom.CoreLib
 {
-    abstract class Weapon : Item, IPackable
+    public abstract class Weapon : Item, IPackable
     {
         public Weapon(string name, int price, int weight, int damage) : base(name, price, weight)
         {

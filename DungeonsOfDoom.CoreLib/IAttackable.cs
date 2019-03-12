@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DungeonsOfDoom.CoreLib
 {
-    interface IAttackable
+    public interface IAttackable
     {
         int Health { get; set; }
         int Damage { get; set; }

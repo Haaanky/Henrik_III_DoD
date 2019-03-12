@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DungeonsOfDoom.CoreLib
 {
-    abstract class Monster : NonPlayerCharacter, IPackable, IAttackable
+    public abstract class Monster : NonPlayerCharacter, IPackable, IAttackable
     {
         public Monster(int health, string name) : base(health, name)
         {

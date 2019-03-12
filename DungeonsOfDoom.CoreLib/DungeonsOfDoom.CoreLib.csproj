@@ -12,4 +12,9 @@
     <ProjectReference Include="..\FirstClassLib\FirstClassLib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Archetypes\NewFolder\" />
+    <Folder Include="Items\" />
+  </ItemGroup>
+
 </Project>

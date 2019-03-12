@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DungeonsOfDoom.CoreLib
 {
-    interface IPackable
+    public interface IPackable
     {
         string Name { get; }
         int Weight { get; }

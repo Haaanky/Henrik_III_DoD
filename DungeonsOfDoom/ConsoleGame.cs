@@ -7,14 +7,12 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Console = Colorful.Console;
+using DungeonsOfDoom.CoreLib;
 
 namespace DungeonsOfDoom
 {
     class ConsoleGame
     {
-        public const int gameBoardX = 20;
-        public const int gameBoardY = 5;
-
         Player player;
         World world; //gjorde om world till en klass med prop room[,] istället, för att lättare kunna återanvända world etc som instans
         List<Archetype> archetypes = new List<Archetype>() { new Bard(), new FightingMan(), new MagicUser(), new Theif() }; //en lista med alla archetypes, kan nog göras lättare/mer DRY
@@ -136,7 +134,7 @@ namespace DungeonsOfDoom
             Monster.NumberOfMonsters = 0;
             world = new World //skapar en ny instans av world och instansierar en ny karta med proppen Room array
             {
-                Map = new Room[gameBoardX, gameBoardY]
+                Map = new Room[World.gameBoardX, World.gameBoardY]
             };
 
             for (int y = 0; y < world.Map.GetLength(1); y++)

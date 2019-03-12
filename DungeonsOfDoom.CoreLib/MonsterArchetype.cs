@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DungeonsOfDoom.CoreLib
 {
-    class MonsterArchetype : Archetype
+    public class MonsterArchetype : Archetype
     {
         public MonsterArchetype() : base(30, "Monster", ArchetypeColors.Red)
         {

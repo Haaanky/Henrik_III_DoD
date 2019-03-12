@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DungeonsOfDoom.CoreLib
 {
-    abstract class Item : IPackable
+    public abstract class Item : IPackable
     {
         public Item(string name, int price, int weight)
         {

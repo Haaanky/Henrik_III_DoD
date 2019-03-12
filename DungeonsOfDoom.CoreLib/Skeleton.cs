@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DungeonsOfDoom.CoreLib
 {
-    class Skeleton : Monster, IPackable, IAttackable
+    public class Skeleton : Monster, IPackable, IAttackable
     {
         public Skeleton(int health, string name) : base (health, name)
         {

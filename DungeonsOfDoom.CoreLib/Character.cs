@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DungeonsOfDoom.CoreLib
 {
-    abstract class Character : IPackable
+    public abstract class Character : IPackable
     {
         private string name;
 

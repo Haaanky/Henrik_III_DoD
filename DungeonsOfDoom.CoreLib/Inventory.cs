@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DungeonsOfDoom.CoreLib
 {
-    class Inventory
+    public class Inventory
     {
         private int _weight;
 

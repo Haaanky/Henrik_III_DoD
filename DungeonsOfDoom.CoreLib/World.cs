@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DungeonsOfDoom.CoreLib
 {
-    class World
+    public class World
     {
         public const int gameBoardX = 20;
         public const int gameBoardY = 5;

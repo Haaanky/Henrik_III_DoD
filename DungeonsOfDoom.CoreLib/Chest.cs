@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DungeonsOfDoom.CoreLib
 {
-    class Chest : Item, IAttackable, IPackable
+    public class Chest : Item, IAttackable, IPackable
     {
         public Chest(string name, int price, int weight) : base(name, price, weight)
         {

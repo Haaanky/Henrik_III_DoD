@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DungeonsOfDoom.CoreLib
 {
-    class Room
+    public class Room
     {
         public Monster Monster { get; set; }
         //public Skeleton Skeleton { get; set; }

@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="DungeonsOfDoom.Archetype" Collapsed="true">
+  <Class Name="DungeonsOfDoom.CoreLib.Archetype" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAEAAAABAAAEAAAAAAABBAAAAAAAAACAAIACg=</HashCode>
+      <HashCode>AAAACACAEAAAABAAAEAAAAAAABBAAAAAAAAACAAIACg=</HashCode>
       <FileName>Archetype.cs</FileName>
-      <NewMemberFileName>Archetype.ArchetypeColors.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DungeonsOfDoom.Bard" Collapsed="true">
@@ -22,21 +21,7 @@
       <FileName>FightingMan.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DungeonsOfDoom.MagicUser" Collapsed="true">
-    <Position X="0.5" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MagicUser.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="DungeonsOfDoom.Theif" Collapsed="true">
-    <Position X="0.5" Y="4" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Theif.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="DungeonsOfDoom.Character" Collapsed="true">
+  <Class Name="DungeonsOfDoom.CoreLib.Character" Collapsed="true">
     <Position X="3.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAQCACAAAAAAAAEAAABAAQAAKAEAkAAAAAAAAAAAAA=</HashCode>
@@ -51,7 +36,7 @@
       <FileName>Healer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DungeonsOfDoom.Weapon" Collapsed="true">
+  <Class Name="DungeonsOfDoom.CoreLib.Weapon" Collapsed="true">
     <Position X="12.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
@@ -59,7 +44,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="DungeonsOfDoom.Apple" Collapsed="true">
+  <Class Name="DungeonsOfDoom.CoreLib.Apple" Collapsed="true">
     <Position X="8.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -67,7 +52,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="DungeonsOfDoom.Item" Collapsed="true">
+  <Class Name="DungeonsOfDoom.CoreLib.Item" Collapsed="true">
     <Position X="10.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACAAYAAAAAEAAAAAAQAACAAAAAAAAAAAAAAAAA=</HashCode>
@@ -82,7 +67,7 @@
       <FileName>Merchant.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DungeonsOfDoom.Monster" Collapsed="true">
+  <Class Name="DungeonsOfDoom.CoreLib.Monster" Collapsed="true">
     <Position X="7" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -97,21 +82,21 @@
       <FileName>NonPlayerCharacter.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DungeonsOfDoom.PlayableCharacter" Collapsed="true">
+  <Class Name="DungeonsOfDoom.CoreLib.PlayableCharacter" Collapsed="true">
     <Position X="2.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAYAA=</HashCode>
       <FileName>PlayableCharacter.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DungeonsOfDoom.Room" Collapsed="true">
+  <Class Name="DungeonsOfDoom.CoreLib.Room" Collapsed="true">
     <Position X="15" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Room.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DungeonsOfDoom.Skeleton" Collapsed="true">
+  <Class Name="DungeonsOfDoom.CoreLib.Skeleton" Collapsed="true">
     <Position X="7.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
@@ -119,7 +104,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="DungeonsOfDoom.Sword" Collapsed="true">
+  <Class Name="DungeonsOfDoom.CoreLib.Sword" Collapsed="true">
     <Position X="13.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -143,7 +128,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="DungeonsOfDoom.Inventory" Collapsed="true">
+  <Class Name="DungeonsOfDoom.CoreLib.Inventory" Collapsed="true">
     <Position X="7.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAAAAAAAAAAAAACAAAAAAACAAAAAAAAA=</HashCode>
@@ -172,7 +157,7 @@
       <FileName>MonsterArchetype.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DungeonsOfDoom.Chest" Collapsed="true">
+  <Class Name="DungeonsOfDoom.CoreLib.Chest" Collapsed="true">
     <Position X="10.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
@@ -180,14 +165,28 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="DungeonsOfDoom.IAttackable" Collapsed="true">
+  <Class Name="DungeonsOfDoom.CoreLib.Theif" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Theif.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DungeonsOfDoom.CoreLib.MagicUser" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MagicUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="DungeonsOfDoom.CoreLib.IAttackable" Collapsed="true">
     <Position X="15" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACACAAAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IAttackable.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="DungeonsOfDoom.IPackable" Collapsed="true">
+  <Interface Name="DungeonsOfDoom.CoreLib.IPackable" Collapsed="true">
     <Position X="15" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAAAAAAAA=</HashCode>
