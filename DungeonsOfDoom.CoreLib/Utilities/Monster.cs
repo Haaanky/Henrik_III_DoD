@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DungeonsOfDoom.CoreLib.Archetypes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

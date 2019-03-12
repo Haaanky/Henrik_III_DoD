@@ -8,6 +8,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using Console = Colorful.Console;
 using DungeonsOfDoom.CoreLib;
+using DungeonsOfDoom.CoreLib.Archetypes;
+using DungeonsOfDoom.CoreLib.Characters;
+using DungeonsOfDoom.CoreLib.Items;
 
 namespace DungeonsOfDoom
 {

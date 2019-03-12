@@ -1,8 +1,9 @@
-﻿using System;
+﻿using DungeonsOfDoom.CoreLib.Archetypes;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DungeonsOfDoom.CoreLib
+namespace DungeonsOfDoom.CoreLib.Items
 {
     public class Chest : Item, IAttackable, IPackable
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DungeonsOfDoom.CoreLib
+namespace DungeonsOfDoom.CoreLib.Archetypes
 {
     public class FightingMan : Archetype
     {
