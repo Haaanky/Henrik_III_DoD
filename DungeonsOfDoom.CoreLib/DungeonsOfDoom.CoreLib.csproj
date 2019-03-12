@@ -1,21 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="RandomUtils.cs" />
-    <Compile Remove="TextUtils.cs" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Colorful.Console" Version="1.2.9" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DungeonsOfDoom.CoreLib\DungeonsOfDoom.CoreLib.csproj" />
     <ProjectReference Include="..\FirstClassLib\FirstClassLib.csproj" />
   </ItemGroup>
 

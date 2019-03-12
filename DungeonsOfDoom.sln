@@ -8,7 +8,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DungeonsOfDoom", "DungeonsO
 		{64029B1E-11B4-40F3-9066-8833283DA871} = {64029B1E-11B4-40F3-9066-8833283DA871}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstClassLib", "FirstClassLib\FirstClassLib.csproj", "{64029B1E-11B4-40F3-9066-8833283DA871}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstClassLib", "FirstClassLib\FirstClassLib.csproj", "{64029B1E-11B4-40F3-9066-8833283DA871}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonsOfDoom.CoreLib", "DungeonsOfDoom.CoreLib\DungeonsOfDoom.CoreLib.csproj", "{054360E9-2C9A-4F1B-A806-867B8669E3BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +26,10 @@ Global
 		{64029B1E-11B4-40F3-9066-8833283DA871}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64029B1E-11B4-40F3-9066-8833283DA871}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64029B1E-11B4-40F3-9066-8833283DA871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{054360E9-2C9A-4F1B-A806-867B8669E3BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{054360E9-2C9A-4F1B-A806-867B8669E3BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{054360E9-2C9A-4F1B-A806-867B8669E3BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{054360E9-2C9A-4F1B-A806-867B8669E3BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
